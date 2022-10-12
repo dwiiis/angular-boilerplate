@@ -1,0 +1,14 @@
+<div class="layout-wrapper" [class]="containerClass">
+    <nglibs-header></nglibs-header>
+    <div class="layout-sidebar">
+        <nglibs-sidebar></nglibs-sidebar>
+    </div>
+    <div class="layout-main-container">
+        <div class="layout-main">
+            <router-outlet></router-outlet>
+        </div>
+        <nglibs-footer></nglibs-footer>
+    </div>
+    <!-- <app-config></app-config> -->
+    <div class="layout-mask"></div>
+</div>

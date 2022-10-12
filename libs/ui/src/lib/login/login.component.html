@@ -1,0 +1,40 @@
+<div class="surface-0 flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden" 
+style="background: rgb(230,238,174);
+background: radial-gradient(circle, rgba(230,238,174,1) 0%, rgba(148,187,233,1) 100%);">
+    <div class="grid justify-content-center p-2 lg:p-0" style="min-width:80%">
+        <div class="col-12 xl:col-6">
+            <p-card>
+                
+        
+        <div class="col-12 mt-5 xl:mt-0 text-center">
+            <img src="assets/layout/images/{{layoutService.config.colorScheme === 'light' ? 'mdr-dark' : 'mdr-white'}}.png" alt="Sakai logo" class="mb-5" style="height:40px;">                
+        </div>
+                
+                <div class="w-full md:w-10 mx-auto">
+                    <span class="p-float-label p-input-icon-left mb-3 w-full">
+                        <i class="pi pi-user"></i>
+                        <input type="text" class="w-full" [(ngModel)]="username" id="username" pInputText autocomplete="off">
+                        <label for="lefticon">Username</label>
+                    </span>
+
+                    <span class="p-float-label p-input-icon-left mb-3 w-full">
+                        <i class="pi pi-lock"></i>
+                        <input type="password" class="w-full" [(ngModel)]="password" id="password" pInputText autocomplete="off">
+                        <label for="lefticon">Password</label>
+                    </span>
+                    
+                    <div class="w-full p-3 text-base mb-3 bg-red-50 text-red-400 border-round-sm" *ngIf="errorMessage" >
+                        {{errorMessage}}
+                    </div>
+                    <button pButton pRipple label="Sign In" class="w-full p-3 text-xl" (click)="signIn($event)" *ngIf="!isSubmited"></button>
+                    <button pButton pRipple class="w-full p-3 text-xl" icon="pi" iconPos="right" disabled="true" *ngIf="isSubmited">
+                        <p-progressSpinner [style]="{width: '20px', height: '20px'}" styleClass="custom-spinner" strokeWidth="8" animationDuration=".5s"></p-progressSpinner>
+                    </button>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>
+
+
+<p-toast></p-toast>

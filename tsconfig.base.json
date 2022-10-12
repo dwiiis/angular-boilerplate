@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@angular-boilerplate/model": ["libs/model/src/index.ts"],
+      "@angular-boilerplate/services": ["libs/services/src/index.ts"],
+      "@angular-boilerplate/ui": ["libs/ui/src/index.ts"],
+      "@nglibs/auth": ["libs/auth/src/index.ts"],
+      "@nglibs/enum": ["libs/enum/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/enum/src",
+  "prefix": "nglibs",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/enum"],
+      "options": {
+        "jestConfig": "libs/enum/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/enum/**/*.ts", "libs/enum/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
